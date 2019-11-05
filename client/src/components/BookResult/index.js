@@ -3,11 +3,15 @@ import "./style.css";
 
 // The ...props means, spread all of the passed props onto this element
 // That way we don't have to define them all individually
-function DeleteBtn(props) {
+function BookImage(props) {
   return (
-    <button type="button" className="add-btn btn btn-outline-dark"  {...props} tabIndex="0">
-      Remove
-    </button>
+    <div className="img-container">
+      <img className="book-result-img" src={props.srcUrl} >  
+    </img>
+    </div>
+    
   );
 }
-export default DeleteBtn;
+
+export default BookImage;
+

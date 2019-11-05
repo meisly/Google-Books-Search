@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css"
 
 // Exporting the Container, Row, and Col components from this file
 
@@ -26,3 +27,17 @@ export function Col({ size, children }) {
     </div>
   );
 }
+
+export function ColFlex({ size, children }) {
+  return (
+    <div
+      className={size
+        .split(" ")
+        .map(size => "col-" + size)
+        .join(" ") + " col-flex"}
+    >
+      {children}
+    </div>
+  );
+}
+

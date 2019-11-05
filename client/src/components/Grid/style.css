@@ -1,0 +1,18 @@
+.col-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flex-child {
+  width: 20vw;
+  height: max-content;
+  text-align:center;
+
+}
+
+@media only screen and (max-width: 600px) {
+  .flex-child {
+    width: 40vw;
+    height: max-content
+  }
+}
