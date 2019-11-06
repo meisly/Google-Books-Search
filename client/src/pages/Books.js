@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import AddBtn from "../components/AddBtn";
-import DeleteBtn from "../components/DeleteBtn";
+
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
+import BookResult from "../components/BookResult";
 import { Col, Row, Container, ColFlex } from "../components/Grid";
 import { Input, FormBtn } from "../components/Form";
 import { brotliCompress } from "zlib";
@@ -104,23 +103,10 @@ class Books extends Component {
                 size="md-12"
               >
                 {this.state.books.map(book => (
-                  <div className="flex-child" key={book.ISBN}>
-                    {(book.image && book.image.smallThumbnail)? (
-                      <BookImg srcUrl={book.image.smallThumbnail}/>
-                    ) :( <BookImg srcUrl="http://lgimages.s3.amazonaws.com/nc-sm.gif"/>) }
-                    
-                    <Link to={book.link}>
-                      <strong>
-                        <p style={{marginBottom: ".1rem"}}>{book.title}</p>
-                        {book.subtitle? (<p style={{marginBottom: ".1rem"}}>{book.subtitle}</p>) : null}
-                      </strong>
-                      {book.authors? (<p style={{marginBottom: ".1rem"}}>by {book.authors}</p>) : null}
-                      
-                    </Link>
-
-                    <AddBtn onClick={() => this.addBook(book)} />
-                    <DeleteBtn></DeleteBtn>
-                  </div>
+                  <BookResult
+                    book={book}
+                    addBook={this.addBook}
+                  ></BookResult>
                 ))}
               </ColFlex>
             ) : (

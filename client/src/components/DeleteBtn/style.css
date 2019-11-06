@@ -1,6 +1,7 @@
-.add-btn {
+.delete-btn {
   color: #e74944;
-  position: relative;
-  bottom: 0;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 3rem;
   margin: 0.6rem;
 }

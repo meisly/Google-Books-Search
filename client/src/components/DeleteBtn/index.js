@@ -5,7 +5,7 @@ import "./style.css";
 // That way we don't have to define them all individually
 function DeleteBtn(props) {
   return (
-    <button type="button" className="add-btn btn btn-outline-dark"  {...props} tabIndex="0">
+    <button type="button" className="delete-btn btn btn-outline-dark"  {...props} tabIndex="0">
       Remove
     </button>
   );

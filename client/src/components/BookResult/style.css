@@ -7,7 +7,14 @@
 }
 .img-container {
   height: max-content;
+  min-height: 60%;
   margin-bottom: 1rem;
+}
+.book-info {
+  max-height: 10%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 
 @media only screen and (max-width: 600px) {

@@ -5,9 +5,13 @@
 }
 .flex-child {
   width: 20vw;
-  height: max-content;
+  height: 500px;
   text-align:center;
-
+  position: relative;
+  padding: 1rem;
+  margin: 1rem;
+  border: solid #80808054 1px;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 600px) {

@@ -1,0 +1,6 @@
+.right {
+  color: white;
+  /* float: right; */
+  position: absolute;
+  right: 1rem;
+}
