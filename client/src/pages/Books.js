@@ -5,8 +5,7 @@ import API from "../utils/API";
 import BookResult from "../components/BookResult";
 import { Col, Row, Container, ColFlex } from "../components/Grid";
 import { Input, FormBtn } from "../components/Form";
-import { brotliCompress } from "zlib";
-import BookImg from "../components/BookResult";
+
 
 class Books extends Component {
   state = {
@@ -106,6 +105,7 @@ class Books extends Component {
                   <BookResult
                     book={book}
                     addBook={this.addBook}
+                    search={true}
                   ></BookResult>
                 ))}
               </ColFlex>

@@ -16,7 +16,10 @@
   text-overflow: ellipsis;
   width: 100%;
 }
-
+.collapsible-content {
+  z-index: 1000;
+  background-color: white;
+}
 @media only screen and (max-width: 600px) {
   .img-container {
     height: max-content;

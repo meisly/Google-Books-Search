@@ -1,7 +1,7 @@
 import React from "react";
 import AddBtn from "../AddBtn";
 import DeleteBtn from "../DeleteBtn";
-import { Link } from "react-router-dom";
+import Modal from "../Modal";
 import "./style.css";
 
 // The ...props means, spread all of the passed props onto this element
@@ -14,20 +14,32 @@ function BookResult(props) {
           <img className="book-result-img" src={props.book.image.smallThumbnail} />
         ) : (<img className="book-result-img" src="http://lgimages.s3.amazonaws.com/nc-sm.gif" />)}
       </div>
-      <Link to={props.book.link}>
-        <div className="book-info">
-          <strong>
-            <p style={{ marginBottom: ".1rem" }}>{props.book.title}</p>
-            {props.book.subtitle ? (<p style={{ marginBottom: ".1rem" }}>{props.book.subtitle}</p>) : null}
-          </strong>
-        </div>
+      <div className="book-info">
+        <strong>
+          <p style={{ marginBottom: ".1rem" }}>{props.book.title}</p>
+          {props.book.subtitle ? (<p style={{ marginBottom: ".1rem" }}>{props.book.subtitle}</p>) : null}
+        </strong>
+      </div>
 
-        {props.book.authors ? (<p style={{ marginBottom: ".1rem" }}>by {props.book.authors[0]}</p>) : null}
+      {props.book.authors ? (<p style={{ marginBottom: ".1rem" }}>by {props.book.authors[0]}</p>) : null}
 
-      </Link>
       <div>
-        <AddBtn onClick={() => props.addBook(props.book)} />
-        <DeleteBtn></DeleteBtn>
+        {props.search ? (
+          <div><AddBtn onClick={() => props.addBook(props.book)} />
+            <Modal
+              book={props.book}>
+              <p>{props.book.description}</p>
+            </Modal>
+          </div>
+        ) : (
+            <div>
+              <DeleteBtn onClick={() => props.deleteBook(props.book._id)}></DeleteBtn>
+              <Modal
+                book={props.book}>
+                <p>{props.book.description}</p>
+              </Modal>
+            </div>
+          )}
       </div>
 
     </div>

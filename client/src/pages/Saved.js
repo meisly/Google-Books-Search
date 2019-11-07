@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import BookResult from "../components/BookResult";
-import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
 import { Col, Row, Container, ColFlex } from "../components/Grid";
-import { brotliCompress } from "zlib";
-import BookImg from "../components/BookResult";
+
 
 class Books extends Component {
   state = {
@@ -49,9 +46,9 @@ class Books extends Component {
                 {this.state.books.map(book => (
                   <BookResult
                     book={book}
-
+                    deleteBook={this.deleteBook}
+                    search={false}
                   ></BookResult>
-                  
                 ))}
               </ColFlex>
             ) : (
