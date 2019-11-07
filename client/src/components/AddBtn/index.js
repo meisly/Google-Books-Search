@@ -5,7 +5,7 @@ import "./style.css";
 // That way we don't have to define them all individually
 function AddBtn(props) {
   return (
-    <button type="button" className="add-btn btn btn-outline-dark" {...props} tabIndex="0">
+    <button type="button" className="add-btn btn-small btn btn-outline-dark" {...props} tabIndex="0">
       Add
     </button>
   );

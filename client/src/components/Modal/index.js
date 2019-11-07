@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import "./style.css"
  
 const customStyles = {
   content : {
@@ -44,12 +45,7 @@ class ModalContainer extends React.Component {
   render() {
     return (
       <div className="mo">
-        <button style={{
-               color: "#e74944",
-               position: "absolute",
-               bottom: "1.5rem",
-               left: "3rem",
-               margin: "0.6rem"}} className="btn btn-outline-dark" onClick={this.openModal}>More Details...</button>
+        <button className="modal-btn btn btn-outline-dark" onClick={this.openModal}>More Details...</button>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}

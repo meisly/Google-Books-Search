@@ -10,8 +10,8 @@ function BookResult(props) {
   return (
     <div className="flex-child" key={props.book.ISBN}>
       <div className="img-container">
-        {(props.book.image && props.book.image.smallThumbnail) ? (
-          <img className="book-result-img" src={props.book.image.smallThumbnail} />
+        {(props.book.image && props.book.image.thumbnail) ? (
+          <img className="book-result-img" src={props.book.image.thumbnail} />
         ) : (<img className="book-result-img" src="http://lgimages.s3.amazonaws.com/nc-sm.gif" />)}
       </div>
       <div className="book-info">
@@ -21,9 +21,9 @@ function BookResult(props) {
         </strong>
       </div>
 
-      {props.book.authors ? (<p style={{ marginBottom: ".1rem" }}>by {props.book.authors[0]}</p>) : null}
+      {props.book.authors ? (<p className="auth-info" style={{ marginBottom: ".1rem" }}>by {props.book.authors[0]}</p>) : null}
 
-      <div>
+      <div className="btns-div">
         {props.search ? (
           <div><AddBtn onClick={() => props.addBook(props.book)} />
             <Modal

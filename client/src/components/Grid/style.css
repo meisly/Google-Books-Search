@@ -5,7 +5,7 @@
 }
 .flex-child {
   width: 20vw;
-  height: 500px;
+  height: 400px;
   text-align:center;
   position: relative;
   padding: 1rem;
@@ -15,7 +15,7 @@
 
 @media only screen and (max-width: 600px) {
   .flex-child {
-    width: 40vw;
-    height: max-content
+    width: 34vw;
+    height: 400px;
   }
 }

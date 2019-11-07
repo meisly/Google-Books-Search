@@ -5,3 +5,13 @@
   right: 3rem;
   margin: 0.6rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .add-btn {
+    width: 70%;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 12%;
+    margin: 0.6rem;
+  }
+};

@@ -31,3 +31,20 @@
 .list-overflow-container li:last-child {
   border-bottom: none;
 }
+
+.modal-btn {
+  color: #e74944;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 3rem;
+  margin: 0.6rem;
+}
+@media only screen and (max-width: 600px) {
+  .modal-btn {
+    width: 70%;
+    position: absolute;
+    bottom: 4.5rem;
+    left: 12%;
+    margin: 0.6rem;
+  }
+}
